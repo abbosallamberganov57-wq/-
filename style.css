@@ -1,0 +1,158 @@
+*{outline: 1px solid red;}
+div{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    background-image: linear-gradient(to right,var(--start),var(--end));
+    animation: demo 10s linear infinite;
+    font-size: 40px;
+    color: white;
+    padding: 90px 0px;
+}
+@property --start{
+    syntax: "<color>";
+    initial-value: rgb(0, 106, 255);
+    inherits: false;
+}
+@property --end{
+    syntax: "<color>";
+    initial-value: purple;
+    inherits: false;
+}
+@keyframes demo{
+    0%{
+        --start: lightgreen;
+        --end: yellow;
+    }
+    30%{
+        --start: red;
+        --end: pink;
+    }
+    60%{
+        --start: rgb(0, 255, 132);
+        --end: rgb(164, 84, 218);
+    }
+    90%{
+        --start: rgb(251, 0, 255);
+        --end: rgb(192, 255, 216);
+    }
+    100%{
+        --start: lightgreen;
+        --end: white;
+    }
+}
+main{
+        align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 100px 0px;
+}
+main p{
+    width: 50%;
+    margin: auto;
+}
+section {
+    font-size: 40px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(239, 239, 239);
+    padding: 90px 0px;
+}
+section
+img{
+    width: 450px;
+    height: 450px;
+    margin-top: 25px;
+    border-radius: 15px;
+    transition: all 1s;
+    margin-right: 10px;
+}
+article{
+    font-size: 40px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+    padding: 90px 0px;
+}
+button{
+      background-color: rgb(6, 203, 233);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: auto;
+    display: block;
+    border-color:  rgb(6, 203, 233);
+}
+input{
+    width: 600px;
+    height: 60px;
+    align-items: center;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+textarea{
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 40px;
+}
+footer{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(26, 25, 25, 0.809);
+    margin: auto;
+    color: rgb(255, 255, 255);
+}
+section img:hover{
+    transform: scale(1.1);
+    
+}
+aside{
+    width: 20%;
+}
+header{
+    width: 80%;
+
+}
+nav{
+    display: flex;
+}
+aside img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media  screen and ( max-width:1025px) { 
+  main  p{
+    width: 80%;
+  
+}
+    
+}
+@media  screen and ( max-width:770px) { 
+  input,textarea{
+    width: 80%;
+  
+}
+section img{
+    width: 80%;
+    height: initial;
+}
+    
+}
